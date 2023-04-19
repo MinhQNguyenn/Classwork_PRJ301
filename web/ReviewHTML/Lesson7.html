@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+<html>
+    <head>
+        <title>Lesson 7</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script language="javascript">
+            function check(){
+                var pass1= document.getElementById('password1');
+                var pass2= document.getElementById('password2');
+                if(pass1.value != pass2.value){
+                    alert("Mật khẩu phải trùng!!");
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <h1>ĐĂNG KÝ THÀNH VIÊN</h1>
+        <form>
+            <label>Tên truy cập: </label>
+            <input type="text" id="username" name="username" minlength="8">(*)<br/><br>
+            <label for="pass1">Mật khẩu: </label>
+            <input type="pass" id="password1" name="pass">(*)<br/><br>
+            <label>Nhập lại mật khẩu: </label>
+            <input type="pass" id="password2" name="pass" required onchange="check()">(*)<br/><br>
+            <label for="name">Tên đầy đủ </label>
+            <input type="text" id="name" name="name">(*)<br/><br>
+            <label for="gender">Giới tính</label>
+            <select name="Giới tính" id="Giới tính">
+                <option value="Nam">Nam</option>
+                <option value="Nữ">Nữ</option>
+                <option value="Khác">Khác</option>
+            </select>
+            <br/><br>
+            <label for="email">Email </label>
+            <input type="email" id="email" name="email">(*)<br/><br>
+            <label for="address">Địa chỉ</label>
+            <input type="text" id="address" name="address">(*)<br/><br>
+            
+            <input type="submit" value="Đăng ký">
+            <input type="reset" value="Thoát">
+        </form>
+    </body>
+</html>

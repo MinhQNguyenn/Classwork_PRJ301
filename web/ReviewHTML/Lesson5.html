@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+<html>
+    <head>
+        <title>Lesson 5</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script>
+            function sum(n){
+                var tong=0;
+                for(int i=1; i<=n; i++){
+                    tong+=i;
+                }
+                return tong;
+            }
+            
+            function giaiThua(n){
+                var factorial=1;
+                for(int i=n; i>0;i--){
+                    factorial*=i;
+                }
+                return factorial;
+            }
+            
+            function tongLe(n){
+                var tong=0;
+                for(int i=0; i<=n; i++){
+                    if(i%2!=0){
+                        tong+=i;
+                    }
+                }
+                return tong;
+            }
+            
+            function tongChan(n){
+                var tong=0;
+                for(int i=0; i<=n; i++){
+                    if(i%2==0){
+                        tong+=i;
+                    }
+                }
+                return tong;
+            }
+            
+            function prime(n){
+                var result="";
+                for(int i=2; i<=n; i++){
+                    if(checkPrime(i)){
+                        result+=i +" ";
+                    }
+                }return result;
+            }
+            
+            function checkPrime(a){
+                for (int i=2; i<a; i++) {
+                    if(a%i==0){
+                        return false;
+                    }
+                }return true;
+            }   
+            
+            function luaChon(n){
+                var option= document.getElementById("calculation").value;
+                if(option=="1"){
+                    return sum(n);
+                }
+                else if(option=="2"){
+                    return giaiThua(n);
+                }
+                else if(option=="3"){
+                    return tongLe(n);
+                }
+                else if(option=="4"){
+                    return tongChan(n);
+                }
+                else if(option=="5"){
+                    return prime;
+                }
+            }
+        </script>
+        
+    </head>
+    <body>
+        <h1 style="color: blue">THỰC HIỆN PHÉP TOÁN</h1>
+        <label>Nhập n</label>
+        <input type="number" min="1" max="100" id="num"> (1< n<100) <br/>
+        
+        <label>Chọn phép toán</label>
+        <select name="Phép toán" id="calculation" onchange="result.value=luaChon(num)">
+                <option value="1" >Tổng số n liên tiếp</option>
+                <option value="2" >Tính n!</option>
+                <option value="3" >In dãy lẻ</option>
+                <option value="4" >In dãy số chẵn</option>
+                <option value="5" >In dãy số nguyên tố</option>
+        </select><br>
+        
+        <label for="result">Kết quả</label>
+        <input id="result" type="number">
+    </body>
+</html>

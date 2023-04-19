@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+<html>
+    <head>
+        <title>Lesson 3</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="lesson3.css"/>
+        <script src="lesson3.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div class="Calculator">
+            <h1>THỰC HIỆN PHÉP TOÁN</h1>
+            
+            <form id = "numform">
+                <label for="first_number">Nhập a</label>
+                <input type='number' id = "t1" name="t1" style="background-color: lightblue"><br/><br>
+            
+                <label for="second_number">Nhập b</label>
+                <input type='number' id = "t2" name="t2" style="background-color: lightblue"><br/><br>
+            
+            <button type = "button" onclick="t3.value=Tong(t1,t2)">a+b</button>
+            <button type = "button" onclick="t3.value=Hieu(t1,t2)">a-b</button>
+            <button type = "button" onclick="t3.value=Tich(t1,t2)">a*b</button>
+            <button type = "button" onclick="t3.value=Thuong(t1,t2)">a/b</button><br/><br>
+            
+            <label for="t3">Kết quả</label>
+            <input id = "t3" type="number" style="background-color: violet">
+            </form>
+        </div>
+    </body>
+</html>

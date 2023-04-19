@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+<html>
+    <head>
+        <title>Lesson 11</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script>
+            function thucHien(p, a, b, c, d){
+                document.querySelectorAll("p").forEach(p => p.style.color = "a");
+                document.querySelectorAll("p").forEach(p => p.style.backgroundColor = "b");
+                document.querySelectorAll("p").forEach(p => p.style.fontsize(c));
+                document.querySelectorAll("p").forEach(p => p.style.fontStyle = "d");
+            }
+        </script>
+    </head>
+    <body>
+        <div><p id="paragraph">  Văn tế nghĩa sĩ cần Giuộc ngồi đền thiêng liên trong văn học.<br/>
+                  Cụ Đồ Chiểu chi la một nhà thơ mù, một người hát rong của nhân<br/>
+                  dân, một số tác phẩm cụ để lại mà tiêu biểu nhất là Văn tế nghĩa sĩ<br/>
+                  Cần Giuộc đã làm giàu cho văn học Việt Năm ở vào thời điểm thử thách<br/>
+                  khắc nghiệt nhất cho văn học và cho lịch sử đất nước.</p></div><br>
+        <h1>THAY ĐỔI THUỘC TÍNH CỦA ĐOẠN VĂN TRÊN</h1>
+        
+        <form>
+        <input type="text" id="text-color"><label> màu chữ</label><br><br>  
+        <input type="text" id="background-color"><label> màu nền</label><br><br>  
+        <input type="number" id="font-size"><label> cỡ chữ</label><br><br>  
+        <input type="text" id="font"><label> Font chữ</label><br><br>  
+        
+        <button onclick="thucHien(paragraph, text-color, background-color, font-size, font)">Thực hiện</button>
+        <input type="reset" value="Thoát">
+        </form>
+    </body>
+</html>
